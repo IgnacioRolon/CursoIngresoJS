@@ -4,6 +4,8 @@
 */
 function mostrar()
 {
-
+	var nombre;	
+	nombre = prompt("Ingrese el nombre");
+	elNombre.value = nombre
 }
 
