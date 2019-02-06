@@ -8,5 +8,7 @@ function mostrar()
 	var nombre;	
 	nombre = prompt("Ingrese el nombre");
 	elNombre.value = nombre
+	/* document.getElementById('elNombre').value
+	Es lo mismo a ingresar la ID solo por su nombre. */ 
 }
 
