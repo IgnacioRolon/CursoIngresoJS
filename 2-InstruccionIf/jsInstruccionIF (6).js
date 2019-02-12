@@ -23,17 +23,17 @@ function mostrar()
 
 	if(laEdad > 17)
 	{
-		alert("La persona es mayor de edad.")
+		alert("La persona es mayor de edad.");
 	}
 	else
 	{
 		if(laEdad < 13) 
 		{
-		alert("La persona es un niño.")
+		alert("La persona es un niño.");
 		}
 		else
 		{
-			alert("La persona es adolescente.")
+			alert("La persona es adolescente.");
 		}
 	}
 
