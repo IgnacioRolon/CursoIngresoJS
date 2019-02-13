@@ -46,7 +46,7 @@ function mostrar()
 	var formaDePago;
 	var precioFinal;
 	var recargo;
-	
+
 	descuento = 0;
 	recargo = 0;
 	cantidadProductos = prompt("Ingrese la cantidad de productos");
@@ -61,12 +61,20 @@ function mostrar()
 
 	if(cantidadProductos > 2){
 		descuento = descuento + 0.10;
+		if(precioFinal > 2000){
+			descuento = descuento + 0.15;
+		}
 	}
+	/* interpretación del enunciado, cuestionable
 
-	if(precioFinal > 2000){
-		descuento = descuento + 0.15;
-	}
+	si compra de mas 
+de dos producto se realiza un descuento
+del 10% y si supera los $2000 se agrega
+un descuento adicional de 15%,
 
+intentar otra interpretación
+
+*/
 	if (formaDePago == 2){
 		recargo = 0.10;
 	}
