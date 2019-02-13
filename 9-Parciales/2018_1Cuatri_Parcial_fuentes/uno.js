@@ -32,5 +32,5 @@ function mostrar()
 	edadDos = parseInt(edadDos);
 	sumaEdades = edadUno + edadDos;
 
-	alert("Ustedes son " + nombreUno + " y " + nombreDos + ", sus edades son " + edadUno + " y " + edadDos + ", y la suma de sus edades es " + sumaEdades);
+	alert("Ustedes son " + nombreUno + " y " + nombreDos + " , sus edades son " + edadUno + " y " + edadDos + " ,y la suma de sus edades es " + sumaEdades + " ");
 }
