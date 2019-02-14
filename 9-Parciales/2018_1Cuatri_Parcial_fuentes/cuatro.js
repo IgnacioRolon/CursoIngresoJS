@@ -118,6 +118,7 @@ intentar otra interpretación
 	alert("El precio final es de: " + precioProductos);
 	*/
 
+	//SOLUCION 3
 	var importe;
 	var cantidad;
 	var formaDePago;
