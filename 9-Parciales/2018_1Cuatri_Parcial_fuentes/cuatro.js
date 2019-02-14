@@ -40,6 +40,7 @@ function mostrar()
 	Ejercicio parcial original
 	*/
 	
+	/* SOLUCION 1
 	var cantidadProductos;
 	var precioProductos;
 	var descuento;
@@ -65,7 +66,7 @@ function mostrar()
 			descuento = descuento + 0.15;
 		}
 	}
-	/* interpretación del enunciado, cuestionable
+	// interpretación del enunciado, cuestionable
 
 	si compra de mas 
 de dos producto se realiza un descuento
@@ -74,7 +75,7 @@ un descuento adicional de 15%,
 
 intentar otra interpretación
 
-*/
+
 	if (formaDePago == 2){
 		recargo = 0.10;
 	}
@@ -82,6 +83,67 @@ intentar otra interpretación
 	precioFinal = precioFinal - precioFinal * descuento + precioFinal * recargo;
 
 	alert("El precio final es de: " + precioFinal);
+	*/
+
+	/* SOLUCION 2
+	var cantidadProductos;
+	var precioProductos;
+	var descuento;
+	var formaDePago;
+	var recargo;
+
+	descuento = 0;
+	recargo = 0;
+	cantidadProductos = prompt("Ingrese la cantidad de productos");
+	precioProductos = prompt("Ingrese el precio a pagar");
+	formaDePago = prompt("Indique el metodo de pago ingresando el numero correspondiente: 1- Efectivo, 2-Tarjeta")
+	
+	cantidadProductos = parseInt(cantidadProductos);
+	precioProductos = parseInt(precioProductos);
+	formaDePago = parseInt(formaDePago);
+
+	if(cantidadProductos > 2){
+		descuento = descuento + 0.10;
+		if(precioProductos > 2000){
+			descuento = descuento + 0.15;
+		}
+	}
+
+	if (formaDePago == 2){
+		recargo = 0.10;
+	}
+
+	precioProductos = precioProductos - precioProductos * descuento + precioProductos * recargo;
+
+	alert("El precio final es de: " + precioProductos);
+	*/
+
+	var importe;
+	var cantidad;
+	var formaDePago;
+
+	cantidad = prompt("Ingrese la cantidad de productos");
+	importe = prompt("Ingrese el precio");
+	formaDePago = prompt("Indique el metodo de pago ingresando el numero correspondiente: 1- Efectivo, 2-Tarjeta")
+
+	cantidad = parseInt(cantidad);
+	importe = parseInt(importe);
+
+	if(cantidad > 2){
+		if(importe>2000){
+			importe = importe * 0.75;
+		}else{
+			importe = importe * 0.9;
+		}
+	}
+
+	if (formaDePago == "2"){
+		importe = importe * 1.1;
+	} 
+
+	alert("El precio final es: " + importe);
+
+
 }
 
 /*
