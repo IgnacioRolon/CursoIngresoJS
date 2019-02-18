@@ -14,6 +14,7 @@ function CalcularPrecio ()
  	var importe;
  	var impuestos;
  	var marca;
+ 	var descuento;
 
  	marca = Marca.value;
  	cantidad = Cantidad.value;
@@ -22,35 +23,38 @@ function CalcularPrecio ()
  	importe = cantidad * 35;
 
  	if (cantidad > 5){
- 		importe = importe * 0.5;
+ 		descuento = 0.5;
  		}else{
  			if(cantidad == 5){
  				if(marca == "ArgentinaLuz"){
- 					importe = importe * 0.6;
+ 					descuento = 0.6;
  				}else{
- 					importe = importe * 0.7;
+ 					descuento =  0.7;
  				} 			
- 			}
- 			if(cantidad == 4){
- 				if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
- 					importe = importe * 0.75;
- 				}else{
- 					importe = importe * 0.8;
- 				}
- 			}
- 			if(cantidad == 3){
- 				if(marca == "ArgentinaLuz"){
- 					importe = importe * 0.85;
- 				}else{
- 					if(marca == "FelipeLamparas"){
- 						importe = importe * 0.9;
- 					}else{
- 						importe = importe * 0.95;
- 					}
- 				}
- 			} 				
+ 			}else{
+	 			if(cantidad == 4){
+	 				if(marca == "ArgentinaLuz" || marca == "FelipeLamparas"){
+	 					descuento =  0.75;
+	 				}else{
+	 					descuento = 0.8;
+	 				}
+	 			}else{
+	 				if(cantidad == 3){
+		 				if(marca == "ArgentinaLuz"){
+		 					descuento = 0.85;
+		 				}else{
+		 					if(marca == "FelipeLamparas"){
+		 						descuento = 0.9;
+		 					}else{
+		 						descuento = 0.95;
+		 					}
+		 				}
+	 				}
+	 			} 
+ 			}				
  		}
- 	
+
+ 	importe = importe * descuento;
 
  	if(importe > 120){
  		impuestos = importe * 0.1;
