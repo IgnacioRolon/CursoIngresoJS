@@ -1,7 +1,7 @@
 function mostrar()
 {
 	
-	
+	/*
 	
 	var numero1;
 	var numero2;
@@ -38,7 +38,7 @@ function mostrar()
 		}	
 	}
 
-	
+	*/
 	/* SOLUCION 1
 	var cantidadProductos;
 	var precioProductos;
@@ -146,15 +146,59 @@ intentar otra interpretación
 
 	*/
 
+var precio1;
+var precio2;
+var precio3;
+var precio4;
+var precioMayor;
+var precioTotal;
+var recuento;
 
+precio1 = prompt("Ingrese el primer monto");
+precio2 = prompt("Ingrese el segundo monto");
+precio3 = prompt("Ingrese el tercer monto");
+precio4 = prompt("Ingrese el cuarto monto");
+
+precio1 = parseInt(precio1);
+precio2 = parseInt(precio2);
+precio3 = parseInt(precio3);
+precio4 = parseInt(precio4);
+
+if(precio1 >= precio2 && precio1 >= precio3 && precio1 >= precio4){
+	precioMayor = precio1;
+}else{
+	if(precio2 >= precio3 && precio2 >= precio4){
+		precioMayor = precio2;
+	}else{
+		if( precio3 >= precio4){
+			precioMayor = precio3;
+		}else{
+			precioMayor = precio4;
+		}
+	}
+}
+
+precioTotal = precio1 + precio2 + precio3 + precio4;
+
+if(precioTotal > 100){
+	recuento = 0.9;
+}else{
+	if(precioTotal > 50){
+		recuento = 0.95;
+	}else{
+		recuento = 1.15;
+	}
+}
+
+
+precioTotal = precioTotal * recuento;
+alert("El mayor es " + precioMayor + " y el precio total es " + precioTotal);
 
 }
 
 /*
-al realizar una compra, si compra de mas 
-de dos producto se realiza un descuento
-del 10% y si supera los $2000 se agrega
-un descuento adicional de 15%, si el pago
-es con tarjeta y no efectivo al final
-se le agrega un 10% de recargo.
+Si supera 100$ -10%
+Si supera 50$ -5%
+Si es menor de 50$ +15%
+{}
 */
