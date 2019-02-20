@@ -2,7 +2,7 @@ function mostrar()
 {
 	
 	
-	/*
+	
 	var numero1;
 	var numero2;
 	var resultado;
@@ -37,8 +37,7 @@ function mostrar()
 			}
 		}	
 	}
-	Ejercicio parcial original
-	*/
+
 	
 	/* SOLUCION 1
 	var cantidadProductos;
@@ -119,6 +118,7 @@ intentar otra interpretación
 	*/
 
 	//SOLUCION 3
+	/*
 	var importe;
 	var cantidad;
 	var formaDePago;
@@ -143,6 +143,9 @@ intentar otra interpretación
 	} 
 
 	alert("El precio final es: " + importe);
+
+	*/
+
 
 
 }
